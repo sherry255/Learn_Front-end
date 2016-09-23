@@ -1,0 +1,29 @@
+<div>
+  <canvas> id="drawing" width="200" height="200">A drawing of something.
+  </canvas>
+</div>
+
+<script>
+  var drawing = document.getElementById("drawing");
+//确定浏览器支持<canvas>元素
+  if (drawing.getContext) {
+      var context = drawing.getContext("2d");
+      //根据Mozilla的文档
+
+      //绘制红色描边矩形
+      context.strokeStyle = "#ff0000";
+      context.strokeRect(10,10,50,50);
+
+      //绘制红色矩形
+      context.fillStyle = "#ff0000";
+      context.fillRect(10,10,50,50);
+
+      //绘制半透明的蓝色描边矩形
+      context.strokeStyle = "rgba(0,0,255,0.5)";
+      context.strokeRect(30,30,50,50);
+
+      //绘制半透明的蓝色描边矩形
+      context.fillStyle = "rgba(0,0,255,0.5)";
+      context.fillRect(30,30,50,50);
+  }
+</script>
